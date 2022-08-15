@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* font import */
+
+*{
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+/* title */
+
+#tabs .sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 17.5%;
+  height: 100%;
+  padding: 20px, 0;
+  transition: all 0.5s ease;
+  /* background-color: #CF6679; */
+  background-color: #F5F1DE;
+  overflow-y: scroll;
+}
+
+#tabs .sidebar .title {
+  margin-top: 5%;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+#tabs .sidebar .title img {
+  display: block;
+  width: 10%;
+  height: 10%;
+  margin: 0 auto;
+}
+
+#tabs .sidebar .title h3 {
+  color: #CF6679;
+  margin: 10px, 0, 5px;
+}
+
+#tabs .sidebar .title p {
+  color: #CF6679;
+  font-size: 16px;
+}
+
+#tabs .sidebar .chart-container {
+  margin-left: 2.5%;
+  margin-top: 15%;
+}
+
+#tabs .sidebar .chart-container h3 {
+  margin-top: 15%;
+  margin-bottom: 5%;
+  font-size: 20px;
+  color: #2d2d2d;
+  vertical-align: middle;
+}
+
+#tabs .sidebar .chart-container h3 .chart-container-image {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-bottom: 4px;
+  border-radius: 100px;
+}
+
+#tabs .sidebar .info-container {
+  margin-left: 2.5%;
+  margin-top: 15%;
+}
+
+#tabs .sidebar .info-container .info-container-title {
+  display: flex;
+  align-items: left;
+}
+
+#tabs .sidebar .info-container .info-container-title h3 {
+  font-size: 20px;
+  color: #2d2d2d;
+  vertical-align: middle;
+}
+
+#tabs .sidebar .info-container .info-container-title h3 .info-container-image {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-bottom: 4px;
+  border-radius: 100px;
+}
+
+#tabs .sidebar .info-container h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #4d4d4d;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#tabs .sidebar .info-container h4 #info_int_co {
+  font-size: 18px;
+  font-weight: 600;
+  color: #CF6679;
+  text-align: right;
+  align-items: right;
+}
+
+#tabs .sidebar .info-container h4 #info_pedx_co {
+  font-size: 18px;
+  font-weight: 600;
+  color: #CF6679;
+  text-align: right;
+  align-items: right;
+}
+
+#tabs .sidebar .info-container h4 #info_sclzn_co {
+  font-size: 18px;
+  font-weight: 600;
+  color: #CF6679;
+  text-align: right;
+  align-items: right;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+  <head>
+    <meta charset="utf-8">
+    <title>MIM | Gangneung</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.4.0/mapbox-gl.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Red+Hat+Display">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.4.0/mapbox-gl.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js" integrity="sha256-+8RZJua0aEWg+QVVKg4LEzEEm/8RFez5Tb4JBNiV5xA=" crossorigin="anonymous"></script>
+    <script src='https://unpkg.com/@turf/turf@6/turf.min.js'></script>
+  </head>
+  <body>
+    <nav id="menu"></nav>
+    <div id="map"></div>
+    <div class="map-overlay-top" id="tabs">
+      <div>
+        <div class="sidebar">
+          <div class="title">
+            <img src="./images/mim_logo.png">
+            <h3>MIM Institute <p>Gangneung Gangneung Gangneung</p>
+            </h3>
+          </div>
+          <div class="chart-container">
+            <h3>
+              <img src="./images/greencircle.png" class="chart-container-image" alt=""> Building Use
+            </h3>
+            <canvas id="chartbld"></canvas>
+            <script>
+              function load() {
+                console.log("Loaded event!");
+              }
+              window.onload = load;
+            </script>
+            <canvas id="chartblddetail"></canvas>
+            <script>
+              function load() {
+                console.log("Loaded event!");
+              }
+              window.onload = load;
+            </script>
+            <h3>
+              <img src="./images/bluecircle.png" class="chart-container-image" alt=""> Road Analysis [NAIN]
+            </h3>
+            <canvas id="chartroadnain"></canvas>
+            <script>
+              function load() {
+                console.log("Loaded event!");
+              }
+              window.onload = load;
+            </script>
+            <h3>
+              <img src="./images/bluecircle.png" class="chart-container-image" alt=""> Road Analysis [NACH]
+            </h3>
+            <canvas id="chartroadnach"></canvas>
+            <script>
+              function load() {
+                console.log("Loaded event!");
+              }
+              window.onload = load;
+            </script>
+          </div>
+          <div class="info-container">
+            <div class="info-container-title">
+              <h3>
+                <img src="./images/redcircle.png" class="info-container-image" alt=""> Pedestrian Safety
+              </h3>
+            </div>
+            <h4>교차로 <span id="info_int_co"></span>
+            </h4>
+            <h4>횡단보도 <span id="info_pedx_co"></span>
+            </h4>
+            <h4>어린이보호구역 <span id="info_sclzn_co"></span>
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/scriptTest.js"></script>
+  </body>
+</html>
