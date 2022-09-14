@@ -156,8 +156,8 @@ map.on(
 					cutout: "45%",
 					radius: '70%',
 					hoverOffset: 25,
-					borderColor: ["#fffb05", "#b34400", "#b30c00", "#0065e0", "#636363"],
-					backgroundColor: ["#fffd75", "#ff6201", "#ff1201", "#4197ff", "#8d8d8d"],
+					backgroundColor: ["#CF4F4F", "#DF7649", "#BDE7F4", "#A3D393", "#8d8d8d"],
+					borderColor: ["#CF4F4F", "#DF7649", "#BDE7F4", "#A3D393", "#8d8d8d"],
 				}, ],
 			},
 		})
@@ -191,8 +191,8 @@ map.on(
 					],
 					axis: 'y',
 					fill: false,
-					backgroundColor: ["#fffd75", "#ff6201", "#ff1201", "#4197ff", "#8d8d8d"],
-					borderColor: ["#fffb05", "#b34400", "#b30c00", "#0065e0", "#636363"],
+					backgroundColor: ["#CF4F4F", "#DF7649", "#BDE7F4", "#A3D393", "#8d8d8d"],
+					borderColor: ["#CF4F4F", "#DF7649", "#BDE7F4", "#A3D393", "#8d8d8d"],
 					borderWidth: 2,
 					barThickness: '20'
 				}]
@@ -354,48 +354,91 @@ map.on("load", () => {
 				"match",
 				["get", "BDCODE"],
 				"01",
-				"#fee6c2",
+				"#CF4F4F",
 				"02",
-				"#c08484",
+				"#CF4F4F",
 				"03",
-				"#f7412a",
+				"#DF7649",
 				"04",
-				"#f7412a",
+				"#DF7649",
 				"05",
-				"#f7412a",
-				"06",
-				"#f6b112",
-				"07",
-				"#67e785",
-				"08",
-				"#dd6f8a",
-				"09",
-				"#33a02c",
-				"10",
-				"#ccccc1",
-				"11",
-				"#ed83b8",
-				"12",
-				"#f7412a",
-				"13",
-				"#f7f966",
-				"14",
-				"#f7f966",
-				"15",
-				"#f7f966",
-				"16",
-				"#f7f966",
-				"17",
-				"#9ff2ff",
-				"18",
-				"#9ff2ff",
-				"19",
-				"#009874",
-				"20",
-				"#0a4f40",
-				"21",
-				"#f6b112",
 				"#8D8D8D",
+				"06",
+				"#BDE7F4",
+				"07",
+				"#8D8D8D",
+				"08",
+				"#A3D393",
+				"09",
+				"#8D8D8D",
+				"10",
+				"#8D8D8D",
+				"11",
+				"#8D8D8D",
+				"12",
+				"#8D8D8D",
+				"13",
+				"#8D8D8D",
+				"14",
+				"#8D8D8D",
+				"15",
+				"#8D8D8D",
+				"16",
+				"#8D8D8D",
+				"17",
+				"#8D8D8D",
+				"18",
+				"#8D8D8D",
+				"19",
+				"#8D8D8D",
+				"20",
+				"#8D8D8D",
+				"21",
+				"#8D8D8D",
+				"#8D8D8D",
+				// "01",
+				// "#fee6c2",
+				// "02",
+				// "#c08484",
+				// "03",
+				// "#f7412a",
+				// "04",
+				// "#f7412a",
+				// "05",
+				// "#f7412a",
+				// "06",
+				// "#f6b112",
+				// "07",
+				// "#67e785",
+				// "08",
+				// "#dd6f8a",
+				// "09",
+				// "#33a02c",
+				// "10",
+				// "#ccccc1",
+				// "11",
+				// "#ed83b8",
+				// "12",
+				// "#f7412a",
+				// "13",
+				// "#f7f966",
+				// "14",
+				// "#f7f966",
+				// "15",
+				// "#f7f966",
+				// "16",
+				// "#f7f966",
+				// "17",
+				// "#9ff2ff",
+				// "18",
+				// "#9ff2ff",
+				// "19",
+				// "#009874",
+				// "20",
+				// "#0a4f40",
+				// "21",
+				// "#f6b112",
+				// "#8D8D8D",
 			],
 			"fill-opacity": 0.85,
 		},
@@ -424,9 +467,31 @@ map.on("load", () => {
 	});
 });
 
+// schoolzone polygon data
+map.on("load", () => {
+	map.addSource("schoolzone", {
+		type: "vector",
+		url: "mapbox://mim-institute.9dir7dpo",
+	});
+	map.addLayer({
+		id: "School Zone",
+		type: "fill",
+		source: "schoolzone",
+		"source-layer": "SCHOOLZONE-cbdfuu",
+		layout: {
+			visibility: "visible",
+		},
+		minzoom: 12,
+		paint: {
+			"fill-color": "#dfed15",
+			"fill-opacity": 0.85,
+		},
+	});
+});
+
 // bus stop point data
 map.on("load", () => {
-	map.loadImage("/images/busstopicon.png", (error, image) => {
+	map.loadImage("/images/busstopiconblue.png", (error, image) => {
 		if (error) throw (error);
 		map.addImage("busstopicon", image);
 	})
@@ -447,9 +512,9 @@ map.on("load", () => {
 			"icon-size": {
 				base: 0,
 				stops: [
-					[12, 0.03],
-					[15, 0.035],
-					[17, 0.07],
+					[12, 0.04],
+					[15, 0.055],
+					[17, 0.085],
 				]
 			}
 		},
@@ -469,7 +534,7 @@ map.on("load", () => {
 		layout: {
 			visibility: "visible",
 		},
-		minzoom: 12,
+		minzoom: 14,
 		paint: {
 			"line-color": [
 				"step",
@@ -498,9 +563,9 @@ map.on("load", () => {
 			"line-width": {
 				base: 0,
 				stops: [
-					[14, 1],
-					[15, 2],
-					[17, 3],
+					[14, 0.5],
+					[15, 0.75],
+					[17, 1.25],
 				],
 			},
 		},
@@ -524,7 +589,7 @@ map.on("idle", () => {
 	}
 
 	// Enumerate ids of the layers.
-	const toggleableLayerIds = ["Building", "Road Analysis", "Road Width", "Bus Stop", "Land Value", "Land Use", "Pedestrian Crossing", "School Zone", "Overpass"];
+	const toggleableLayerIds = ["Building", "Road Analysis", "Bus Stop", "Pedestrian Crossing", "School Zone"];
 
 	for (const id of toggleableLayerIds) {
 		if (document.getElementById(id)) {
